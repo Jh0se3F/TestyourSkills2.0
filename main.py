@@ -14,7 +14,7 @@ pos_ini_x = largura / 2 - 25
 pos_ini_y = altura / 2
 
 # screen
-screen = Display(lar=largura, alt=altura, text='Teste seus Reflexos 2', local_image='sprites/bg.png')
+screen = Display(lar=largura, alt=altura, text='Test your Skills 2', local_image='sprites/bg.png')
 tela = screen.windows
 
 #enemy1
