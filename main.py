@@ -5,9 +5,13 @@ import random
 #Pygame iniciando
 pygame.init()
 
+#configs tela
 largura = 1024
 altura = 768
 speed_enemy = random.randint(15, 21)
+#posições iniciais
+pos_ini_x = largura / 2 - 25
+pos_ini_y = altura / 2
 
 # screen
 screen = Display(lar=largura, alt=altura, text='Teste seus Reflexos 2', local_image='sprites/bg.png')
@@ -27,10 +31,6 @@ enemy4 = Element(l_x=largura // 2 + 37, a_y=altura - 40, speed=speed_enemy, loca
 
 #player
 player = Element(l_x=largura /2 -25, a_y=altura / 2, speed=35, local_image='sprites/player.png', hp=200)
-
-#posições iniciais
-pos_ini_x = largura / 2 - 25
-pos_ini_y = altura / 2
 
 #funções
 #desenha na tela
@@ -65,7 +65,6 @@ def moviment():
     #movimento enemy4
     enemy4.sprite.rect[0] += enemy4.sprite.speed
     enemy4.sprite.rect[1] += enemy4.speed_y
-
 
     # definindo o limite da tela (eixo X) : Enemy 1
     if enemy1.sprite.rect[0] > largura - 37 or enemy1.sprite.rect[0] < 0:
